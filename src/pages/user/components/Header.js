@@ -1,8 +1,8 @@
 const Header = ({ userName }) => {
   return (
-    <div>
+    <header>
       <h1>{userName}</h1>
-    </div>
+    </header>
   );
 };
 

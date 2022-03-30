@@ -1,0 +1,13 @@
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0.25rem 0 1rem 0;
+  .col-7 {
+    width: 70%;
+  }
+  .col-3 {
+    width: 30%;
+  }
+}
