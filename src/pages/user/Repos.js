@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import Repo from "./components/Repo";
 
-const Repos = ({ userRepos, repoLimit }) => {
+const Repos = ({ userName, userRepos, repoLimit }) => {
   return (
     <main>
       <div className="row">
@@ -11,10 +12,15 @@ const Repos = ({ userRepos, repoLimit }) => {
         userRepos.map((repositroy, index) => {
           if (index < repoLimit) {
             return (
-              <Repo
-                repoName={repositroy.name}
-                repoStars={repositroy.stargazers_count}
-              />
+              <Link
+                to={`/users/${userName}/repos/${repositroy.name}`}
+                className="row link"
+              >
+                <Repo
+                  repoName={repositroy.name}
+                  repoStars={repositroy.stargazers_count}
+                />
+              </Link>
             );
           }
         })}

@@ -1,0 +1,11 @@
+.link {
+  padding: 0.25rem 0;
+  color: black;
+  text-decoration: none;
+  &:hover {
+    font-weight: bold;
+  }
+  &:visited {
+    color: inherit;
+  }
+}

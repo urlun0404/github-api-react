@@ -31,7 +31,7 @@ const User = () => {
   return (
     <div>
       <Header userName={username} />
-      <Repos userRepos={userRepos} repoLimit={repoLimit} />
+      <Repos userName={username} userRepos={userRepos} repoLimit={repoLimit} />
     </div>
   );
 };

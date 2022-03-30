@@ -61,4 +61,18 @@ main {
 .row .col-3 {
   width: 30%;
 }
+
+.link {
+  padding: 0.25rem 0;
+  color: black;
+  text-decoration: none;
+}
+
+.link:hover {
+  font-weight: bold;
+}
+
+.link:visited {
+  color: inherit;
+}
 /*# sourceMappingURL=style.css.map */
