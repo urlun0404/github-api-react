@@ -26,14 +26,16 @@ const Infos = () => {
           {repo}
         </h2>
       </header>
-      <main>
-        <Info repoInfo={repoInfo} />
-      </main>
+      <main>{repoInfo && <Info repoInfo={repoInfo} />}</main>
       <footer>
-        <Link to={`https://github.com/${username}/${repo}`} className="link">
+        <a
+          href={`https://github.com/${username}/${repo}`}
+          target="_blank"
+          className="row link"
+        >
           Go to this repository on GitHub
-        </Link>
-        <Link to={`/users/${username}`} className="link">
+        </a>
+        <Link to={`/users/${username}`} className="row link">
           Go back to {username}'s repository list
         </Link>
       </footer>
