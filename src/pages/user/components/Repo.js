@@ -6,5 +6,4 @@ const Repo = ({ repoName, repoStars }) => {
     </div>
   );
 };
-
 export default Repo;

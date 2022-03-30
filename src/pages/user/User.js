@@ -4,21 +4,21 @@ import Header from "./components/Header";
 import Repos from "./Repos";
 
 const User = () => {
-  const { username } = useParams();
-  const url = `https://api.github.com/users/${username}/repos`;
   let [userRepos, setUserRepos] = useState([]);
   let [repoLimit, setRepoLimit] = useState(0);
 
+  // fetch API to get all the requested user's repositories
+  const { username } = useParams();
+  const url = `https://api.github.com/users/${username}/repos`;
   let getUserRepos = (url) => {
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
         setUserRepos([...data]);
-      })
-      .catch((err) => console.log(err));
+      });
   };
 
-  // get data using GitHub REST API
+  // load the API data
   useEffect(() => {
     getUserRepos(url);
   }, []);

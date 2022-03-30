@@ -4,10 +4,17 @@
   justify-content: center;
   width: 100%;
   margin: 0.25rem 0 1rem 0;
-  .col-7 {
-    width: 70%;
-  }
+
   .col-3 {
     width: 30%;
+  }
+  .col-4 {
+    width: 40%;
+  }
+  .col-6 {
+    width: 60%;
+  }
+  .col-7 {
+    width: 70%;
   }
 }
