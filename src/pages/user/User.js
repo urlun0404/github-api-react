@@ -4,13 +4,13 @@ import Header from "./components/Header";
 import Repos from "./Repos";
 
 const User = () => {
-  let [userRepos, setUserRepos] = useState([]);
+  const [userRepos, setUserRepos] = useState([]);
   let [repoLimit, setRepoLimit] = useState(0);
 
   // fetch API to get all the requested user's repositories (default max:30)
   const { username } = useParams();
   const url = `https://api.github.com/users/${username}/repos`;
-  let getUserRepos = (url) => {
+  const getUserRepos = (url) => {
     fetch(url)
       .then((response) => response.json())
       .then((data) => {

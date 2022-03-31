@@ -3,7 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import Info from "./components/Info";
 
 const Infos = () => {
-  let [repoInfo, setRepoInfo] = useState(null);
+  const [repoInfo, setRepoInfo] = useState(null);
   const { username, repo } = useParams();
 
   // fetch API to get the information of the requested user's repository
