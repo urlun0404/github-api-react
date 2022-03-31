@@ -18,6 +18,24 @@ const User = () => {
       });
   };
 
+  // trace if user scrolls to the bottom of the page
+  const scrollTracker = () => {
+    const windowHeight =
+      "innerHeight" in window
+        ? window.innerHeight
+        : document.documentElement.offsetHeight;
+    const docHeight = Math.max(
+      document.body.scrollHeight,
+      document.body.offsetHeight,
+      document.documentElement.clientHeight,
+      document.documentElement.scrollHeight,
+      document.documentElement.offsetHeight
+    );
+    if (windowHeight + window.pageYOffset >= docHeight) {
+      console.log(repoLimit);
+    }
+  };
+
   // load the API data
   useEffect(() => {
     getUserRepos(url);
@@ -27,6 +45,14 @@ const User = () => {
   useEffect(() => {
     setRepoLimit(userRepos.length < 10 ? userRepos.length : 10);
   }, [userRepos]);
+
+  // trace the scroll position of the page
+  useEffect(() => {
+    window.addEventListener("scroll", scrollTracker);
+    return () => {
+      window.removeEventListener("scroll", scrollTracker);
+    };
+  }, []);
 
   return (
     <div>
