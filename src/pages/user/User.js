@@ -58,7 +58,7 @@ const User = () => {
     return () => {
       window.removeEventListener("scroll", scrollTracker);
     };
-  }, [userRepos]);
+  }, [repoLimit]);
 
   return (
     <div>
