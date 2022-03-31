@@ -18,6 +18,12 @@ const User = () => {
       });
   };
 
+  const updateRepo = () => {
+    if (repoLimit < userRepos.length) {
+      setRepoLimit(Math.min((repoLimit += 10), userRepos.length));
+    }
+  };
+
   // trace if user scrolls to the bottom of the page
   const scrollTracker = () => {
     const windowHeight =
@@ -32,7 +38,7 @@ const User = () => {
       document.documentElement.offsetHeight
     );
     if (windowHeight + window.pageYOffset >= docHeight) {
-      console.log(repoLimit);
+      updateRepo();
     }
   };
 
@@ -43,7 +49,7 @@ const User = () => {
 
   // set initial repositories
   useEffect(() => {
-    setRepoLimit(userRepos.length < 10 ? userRepos.length : 10);
+    setRepoLimit(repoLimit === 0 ? Math.min(userRepos.length, 10) : 10);
   }, [userRepos]);
 
   // trace the scroll position of the page
@@ -52,7 +58,7 @@ const User = () => {
     return () => {
       window.removeEventListener("scroll", scrollTracker);
     };
-  }, []);
+  }, [userRepos]);
 
   return (
     <div>
