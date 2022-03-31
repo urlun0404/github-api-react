@@ -1,0 +1,4 @@
+/ ./pages/homepage/Home.js 200
+/users/:username ./pages/user/User.js 200
+/users/:username/repos/:repo ./pages/user/Infos.js 200
+* ./pages/error/NotFound.js 404
