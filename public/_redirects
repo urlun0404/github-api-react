@@ -1,4 +1,1 @@
-/ ../src/pages/homepage/Home.js 200
-/users/:username ../src/pages/user/User.js 200
-/users/:username/repos/:repo ../src/pages/user/Infos.js 200
-* ../src/pages/error/NotFound.js 404
+/*    /index.html   200
