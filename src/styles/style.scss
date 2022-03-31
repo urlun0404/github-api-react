@@ -1,5 +1,5 @@
 body {
-  width: 100vw;
+  box-sizing: border-box;
 }
 
 h1,
@@ -14,7 +14,7 @@ h6 {
 
 header,
 main {
-  padding: 1rem 2rem;
+  padding: 1rem;
 }
 
 main {
@@ -22,7 +22,6 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
   font-size: 1.15rem;
 }
 
