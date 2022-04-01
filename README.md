@@ -8,8 +8,10 @@
 
 ## How to Use
 
+<pre>
 點擊 Demo 進入首頁
 <img src="https://i.imgur.com/5bsz4Ln.png" alt="Search Image" style="width: 500px;"/>
+</pre>
 
 ### 搜尋
 
@@ -26,8 +28,10 @@
 
 ### 檢視 Repository 的詳細資料
 
+<pre>
 點擊清單頁面上的 Repository 會進入這個 Repository 的詳細資料頁面
 <img src="https://i.imgur.com/vPWruTz.png" alt="Search Image" style="width: 500px;"/>
+</pre>
 
 - 詳細資料下方按鈕
   - 左邊按鈕連結至 Repository 的 GitHub 頁面
@@ -35,6 +39,7 @@
 
 ## Structure
 
+<pre>
 |- /src
 　　　| - index.js
 　　　| - App.js
@@ -47,7 +52,7 @@
 　　　　　　| - /user
 　　　　　　|　　　| - User.js 使用者主頁面
 　　　　　　|　　　| - /components
-　　　　　　|　　　|　　　| - Headers.js
+　　　　　　|　　　|　　　| - Headers.js 使用於 User.js 和 Info.js 的頁面標頭(顯示查詢的使用者名稱)
 　　　　　　|　　　| - /repository
 　　　　　　|　　　　　　| - Repos.js 顯示使用者 Repository 所有清單項目主畫面
 　　　　　　|　　　　　　| - Infos.js 顯示使用者個別 Repository 所有詳細資料項目主畫面
@@ -56,6 +61,7 @@
 　　　　　　|　　　　　　 　　| - Info.js 回傳使用者個別 Repository 詳細資料項目
 　　　　　　| - /error
 　　　　　　 　　　| - NotFound.js 若網址列輸入不合法路徑皆會導向 NotFound 頁面
+</pre>
 
 ## Author
 
