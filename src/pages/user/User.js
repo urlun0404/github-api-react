@@ -64,10 +64,10 @@ const User = () => {
     <div>
       <Header userName={username} />
       <div className="row">
-        <span>點擊下方Repository看更多資訊</span>
+        <span>點擊下方Repository看更多資訊，或者</span>
         <span>
           <Link to={`/`} className="link" style={{ fontSize: "1.25rem" }}>
-            Go back to homepage
+            返回首頁
           </Link>
         </span>
       </div>
