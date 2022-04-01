@@ -32,7 +32,7 @@ const Infos = () => {
       <main className="repos">{repoInfo && <Info repoInfo={repoInfo} />}</main>
       <footer className="row">
         <a
-          href={`https://github.com/${username}/${repo}`}
+          href={repoInfo && repoInfo.html_url}
           target="_blank"
           className="link"
           style={{ fontSize: "1.25rem" }}
