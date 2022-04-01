@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import Header from "./components/Header";
 import Repos from "./Repos";
 
@@ -63,7 +63,14 @@ const User = () => {
   return (
     <div>
       <Header userName={username} />
-      <div className="row">點擊下方Repository看更多資訊</div>
+      <div className="row">
+        <span>點擊下方Repository看更多資訊</span>
+        <span>
+          <Link to={`/`} className="link" style={{ fontSize: "1.25rem" }}>
+            Go back to homepage
+          </Link>
+        </span>
+      </div>
       <Repos userName={username} userRepos={userRepos} repoLimit={repoLimit} />
     </div>
   );
