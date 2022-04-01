@@ -12,7 +12,7 @@
 <br/>
 <img src="https://i.imgur.com/5bsz4Ln.png" alt="Search Image" style="width: 500px;"/>
 
-#### 搜尋
+### 搜尋
 
 搜尋 GitHub 使用者名稱會導向到這位使用者的 GitHub Public Repository 清單頁面
 
@@ -21,11 +21,11 @@
 - **_username_** 請輸入 GitHub 已註冊的有效使用者帳戶名稱。
 - **_注意_**：可能會搜尋到沒有 public repository 的使用者，並顯示空的 Repository 清單。
 
-#### 顯示更多的 Repository
+### 顯示更多的 Repository
 
 清單頁面預設只會顯示 10 個該名使用者的 Repositories，可以拉動捲軸向下，顯示更多的 Repositories。
 
-#### 檢視 Repository 的詳細資料
+### 檢視 Repository 的詳細資料
 
 點擊清單頁面上的 Repository 會進入這個 Repository 的詳細資料頁面
 <br/>
@@ -34,6 +34,7 @@
 - 詳細資料下方按鈕
   - 左邊按鈕連結至 Repository 的 GitHub 頁面
   - 右邊連結可返回這位使用者的 Repository 清單頁面
+    <br/>
 
 ## Structure
 
