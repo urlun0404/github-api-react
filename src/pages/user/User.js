@@ -6,18 +6,33 @@ import Repos from "./repository/Repos";
 const User = () => {
   const [userRepos, setUserRepos] = useState([]);
   let [repoLimit, setRepoLimit] = useState(0);
+  let [totalRepos, setTotalRepos] = useState(0);
+  let [apiPage, setApiPage] = useState(1);
 
   // fetch API to get all the requested user's repositories (default max:30)
   const { username } = useParams();
-  const url = `https://api.github.com/users/${username}/repos`;
-  const getUserRepos = (url) => {
-    fetch(url)
-      .then((response) => response.json())
-      .then((data) => {
-        setUserRepos([...data]);
+
+  const getUserTotalRepos = (username) => {
+    fetch(`https://api.github.com/users/${username}`)
+      .then((res) => res.json())
+      .then((d) => {
+        setTotalRepos(d.public_repos);
+        getUserRepos(username, apiPage);
       });
   };
 
+  const getUserRepos = (username, page) => {
+    fetch(
+      `https://api.github.com/users/${username}/repos?per_page=100&page=${page}`
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        setUserRepos([...userRepos, ...data]);
+        setApiPage(++apiPage);
+      });
+  };
+
+  // Append repositories to list
   const updateRepo = () => {
     if (repoLimit < userRepos.length) {
       setRepoLimit(Math.min((repoLimit += 10), userRepos.length));
@@ -38,13 +53,20 @@ const User = () => {
       document.documentElement.offsetHeight
     );
     if (Math.ceil(windowHeight + window.pageYOffset) >= docHeight) {
-      updateRepo();
+      if (repoLimit == userRepos.length && userRepos.length < totalRepos) {
+        (async () => {
+          await getUserRepos(username, apiPage);
+          await updateRepo();
+        })();
+      } else {
+        updateRepo();
+      }
     }
   };
 
-  // load the API data
+  // load the API data first
   useEffect(() => {
-    getUserRepos(url);
+    getUserTotalRepos(username);
   }, []);
 
   // set initial repositories
