@@ -2,6 +2,7 @@
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  height: 120vh;
 }
 
 h1,
@@ -12,6 +13,12 @@ h5,
 h6 {
   padding: 0;
   margin: 0;
+}
+
+header,
+main,
+footer {
+  margin: 0.5rem 0;
 }
 
 header,
@@ -61,7 +68,7 @@ footer .link {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  margin: 0.25rem 0 1rem 0;
+  margin: 0.75rem 0;
 }
 
 .row .col-3 {
@@ -91,6 +98,7 @@ footer .link {
 .variable {
   margin: 0 0.5rem;
   font-style: italic;
+  color: #c6364a;
 }
 
 .list .title {
@@ -99,7 +107,6 @@ footer .link {
 }
 
 .link {
-  padding: 0.25rem 0;
   color: inherit;
   text-decoration: none;
 }
@@ -116,6 +123,9 @@ footer .link {
 .repos {
   width: 95%;
   margin: 0 auto;
+  overflow-wrap: break-word;
+  word-break: break-all;
+  word-wrap: break-word;
 }
 
 .repos .title {
@@ -127,7 +137,6 @@ footer .link {
   top: 0;
   width: 100%;
   height: 100%;
-  padding: 1rem;
   background-color: #d4d4d4;
   border-radius: 10px;
   opacity: 0.7;
