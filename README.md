@@ -8,10 +8,9 @@
 
 ## How to Use
 
-<pre>
 點擊 Demo 進入首頁
+<br/>
 <img src="https://i.imgur.com/5bsz4Ln.png" alt="Search Image" style="width: 500px;"/>
-</pre>
 
 ### 搜尋
 
@@ -28,10 +27,9 @@
 
 ### 檢視 Repository 的詳細資料
 
-<pre>
 點擊清單頁面上的 Repository 會進入這個 Repository 的詳細資料頁面
+<br/>
 <img src="https://i.imgur.com/vPWruTz.png" alt="Search Image" style="width: 500px;"/>
-</pre>
 
 - 詳細資料下方按鈕
   - 左邊按鈕連結至 Repository 的 GitHub 頁面
