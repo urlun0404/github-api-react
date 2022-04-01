@@ -13,6 +13,14 @@ const Info = ({ repoInfo }) => {
         <div className="col-4">star gazers</div>
         <div className="col-6">{repoInfo.stargazers_count}</div>
       </div>
+      <div className="row">
+        <div className="col-4">forks</div>
+        <div className="col-6">{repoInfo.forks_count}</div>
+      </div>
+      <div className="row">
+        <div className="col-4">update date</div>
+        <div className="col-6">{repoInfo.updated_at}</div>
+      </div>
       <div className="background"></div>
     </main>
   );
