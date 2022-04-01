@@ -120,6 +120,38 @@ footer .link {
   color: inherit;
 }
 
+.search {
+  width: 50%;
+}
+
+.search input,
+.search button {
+  margin: 0 0.5rem;
+  font-size: 1rem;
+}
+
+.search button {
+  padding: 0.25rem 0.5rem;
+  background-color: #c4c4c4;
+  border: 0;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.search button:hover {
+  background-color: yellow;
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+.home h2 {
+  margin: 1rem;
+}
+
+.home h3 {
+  margin: 0.5rem 0;
+}
+
 .repos {
   width: 95%;
   margin: 0 auto;

@@ -1,0 +1,19 @@
+.search {
+  width: 50%;
+  input,
+  button {
+    margin: 0 0.5rem;
+    font-size: 1rem;
+  }
+  button {
+    padding: 0.25rem 0.5rem;
+    background-color: #c4c4c4;
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+    &:hover {
+      background-color: yellow;
+      transform: scale(1.15);
+    }
+  }
+}
