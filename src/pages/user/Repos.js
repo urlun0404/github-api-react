@@ -13,7 +13,7 @@ const Repos = ({ userName, userRepos, repoLimit }) => {
           if (index < repoLimit) {
             return (
               <Link
-                to={`/users/${userName}/repos/${repositroy.name}/repos`}
+                to={`/users/${userName}/repos/${repositroy.name}`}
                 className="row link"
               >
                 <Repo

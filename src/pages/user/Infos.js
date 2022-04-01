@@ -40,7 +40,7 @@ const Infos = () => {
           Go to this repository on GitHub
         </a>
         <Link
-          to={`/users/${username}`}
+          to={`/users/${username}/repos`}
           className="link"
           style={{ "font-size": "1.25rem" }}
         >
