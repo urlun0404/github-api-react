@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import Header from "./components/Header";
+import Header from "../components/Header";
 import Info from "./components/Info";
 
 const Infos = () => {

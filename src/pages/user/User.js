@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import Header from "./components/Header";
-import Repos from "./Repos";
+import Repos from "./repository/Repos";
 
 const User = () => {
   const [userRepos, setUserRepos] = useState([]);
