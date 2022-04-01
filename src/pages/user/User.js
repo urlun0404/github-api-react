@@ -9,7 +9,7 @@ const User = () => {
   let [totalRepos, setTotalRepos] = useState(0);
   let [apiPage, setApiPage] = useState(1);
 
-  // fetch API to get all the requested user's repositories (default max:30)
+  // fetch API to get all the requested user's repositories
   const { username } = useParams();
 
   const getUserTotalRepos = (username) => {
@@ -21,9 +21,10 @@ const User = () => {
       });
   };
 
+  const maxPerPage = 100;
   const getUserRepos = (username, page) => {
     fetch(
-      `https://api.github.com/users/${username}/repos?per_page=100&page=${page}`
+      `https://api.github.com/users/${username}/repos?per_page=${maxPerPage}&page=${page}`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -32,10 +33,13 @@ const User = () => {
       });
   };
 
-  // Append repositories to list
+  // append repositories to list
   const updateRepo = () => {
     if (repoLimit < userRepos.length) {
       setRepoLimit(Math.min((repoLimit += 10), userRepos.length));
+    }
+    if (repoLimit == userRepos.length && userRepos.length < totalRepos) {
+      getUserRepos(username, apiPage);
     }
   };
 
@@ -53,14 +57,7 @@ const User = () => {
       document.documentElement.offsetHeight
     );
     if (Math.ceil(windowHeight + window.pageYOffset) >= docHeight) {
-      if (repoLimit == userRepos.length && userRepos.length < totalRepos) {
-        (async () => {
-          await getUserRepos(username, apiPage);
-          await updateRepo();
-        })();
-      } else {
-        updateRepo();
-      }
+      setTimeout(updateRepo, 200);
     }
   };
 
@@ -69,9 +66,11 @@ const User = () => {
     getUserTotalRepos(username);
   }, []);
 
-  // set initial repositories
+  // limit the number of newly appended repositories
   useEffect(() => {
-    setRepoLimit(repoLimit === 0 ? Math.min(userRepos.length, 10) : 10);
+    setRepoLimit(
+      repoLimit === 0 ? Math.min(userRepos.length, 10) : (repoLimit += 10)
+    );
   }, [userRepos]);
 
   // trace the scroll position of the page
