@@ -113,6 +113,11 @@ footer .link {
   color: inherit;
 }
 
+.repos {
+  width: 95%;
+  margin: 0 auto;
+}
+
 .repos .title {
   font-size: 1.3rem;
 }
@@ -120,7 +125,7 @@ footer .link {
 .repos .background {
   position: absolute;
   top: 0;
-  width: 95vw;
+  width: 100%;
   height: 100%;
   padding: 1rem;
   background-color: #d4d4d4;
