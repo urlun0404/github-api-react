@@ -23,7 +23,7 @@ const Infos = () => {
       <header>
         <Header userName={username} />
         <h2>
-          <span className="variable" style={{ "font-size": "1.25rem" }}>
+          <span className="variable" style={{ fontSize: "1.25rem" }}>
             repository name:
           </span>
           {repo}
@@ -35,14 +35,14 @@ const Infos = () => {
           href={`https://github.com/${username}/${repo}`}
           target="_blank"
           className="link"
-          style={{ "font-size": "1.25rem" }}
+          style={{ fontSize: "1.25rem" }}
         >
           Go to this repository on GitHub
         </a>
         <Link
           to={`/users/${username}/repos`}
           className="link"
-          style={{ "font-size": "1.25rem" }}
+          style={{ fontSize: "1.25rem" }}
         >
           Go back to {username}'s repository list
         </Link>

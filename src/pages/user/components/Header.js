@@ -2,7 +2,7 @@ const Header = ({ userName }) => {
   return (
     <header>
       <h1>
-        <span className="variable" style={{ "font-size": "1.5rem" }}>
+        <span className="variable" style={{ fontSize: "1.5rem" }}>
           username:
         </span>
         {userName}

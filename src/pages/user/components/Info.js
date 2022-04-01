@@ -10,7 +10,7 @@ const Info = ({ repoInfo }) => {
         <div className="col-6">{repoInfo.description}</div>
       </div>
       <div className="row">
-        <div className="col-4">stars</div>
+        <div className="col-4">star gazers</div>
         <div className="col-6">{repoInfo.stargazers_count}</div>
       </div>
       <div className="background"></div>
