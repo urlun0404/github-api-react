@@ -63,6 +63,7 @@ const User = () => {
   return (
     <div>
       <Header userName={username} />
+      <div className="row">點擊下方Repository看更多資訊</div>
       <Repos userName={username} userRepos={userRepos} repoLimit={repoLimit} />
     </div>
   );

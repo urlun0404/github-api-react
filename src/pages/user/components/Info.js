@@ -1,6 +1,6 @@
 const Info = ({ repoInfo }) => {
   return (
-    <div>
+    <main>
       <div className="row">
         <div className="col-4">fullname</div>
         <div className="col-6">{repoInfo.full_name}</div>
@@ -13,7 +13,7 @@ const Info = ({ repoInfo }) => {
         <div className="col-4">stars</div>
         <div className="col-6">{repoInfo.stargazers_count}</div>
       </div>
-    </div>
+    </main>
   );
 };
 

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
+import Header from "./components/Header";
 import Info from "./components/Info";
 
 const Infos = () => {
@@ -20,22 +21,29 @@ const Infos = () => {
   return (
     <div>
       <header>
-        <h1>{username}</h1>
+        <Header userName={username} />
         <h2>
-          <span>Repository Name: </span>
+          <span className="variable" style={{ "font-size": "1.25rem" }}>
+            repository name:
+          </span>
           {repo}
         </h2>
       </header>
-      <main>{repoInfo && <Info repoInfo={repoInfo} />}</main>
-      <footer>
+      <main className="repos">{repoInfo && <Info repoInfo={repoInfo} />}</main>
+      <footer className="row">
         <a
           href={`https://github.com/${username}/${repo}`}
           target="_blank"
-          className="row link"
+          className="link"
+          style={{ "font-size": "1.25rem" }}
         >
           Go to this repository on GitHub
         </a>
-        <Link to={`/users/${username}`} className="row link">
+        <Link
+          to={`/users/${username}`}
+          className="link"
+          style={{ "font-size": "1.25rem" }}
+        >
           Go back to {username}'s repository list
         </Link>
       </footer>

@@ -3,10 +3,10 @@ import Repo from "./components/Repo";
 
 const Repos = ({ userName, userRepos, repoLimit }) => {
   return (
-    <main>
+    <main className="repos list">
       <div className="row">
-        <div className="col-7">Repository name</div>
-        <div className="col-3">Repository stars</div>
+        <div className="col-7 title">Repository name</div>
+        <div className="col-3 title">Repository stars</div>
       </div>
       {userRepos !== [] &&
         userRepos.map((repositroy, index) => {
@@ -24,6 +24,7 @@ const Repos = ({ userName, userRepos, repoLimit }) => {
             );
           }
         })}
+      <div className="background"></div>
     </main>
   );
 };

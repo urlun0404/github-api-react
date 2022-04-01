@@ -1,8 +1,9 @@
 .link {
   padding: 0.25rem 0;
-  color: black;
+  color: inherit;
   text-decoration: none;
   &:hover {
+    color: blue;
     font-weight: bold;
   }
   &:visited {

@@ -1,7 +1,12 @@
 const Header = ({ userName }) => {
   return (
     <header>
-      <h1>{userName}</h1>
+      <h1>
+        <span className="variable" style={{ "font-size": "1.5rem" }}>
+          username:
+        </span>
+        {userName}
+      </h1>
     </header>
   );
 };
