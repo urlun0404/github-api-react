@@ -17,9 +17,9 @@
 搜尋 GitHub 使用者名稱會導向到這位使用者的 GitHub Public Repository 清單頁面
 
 - 進入首頁後可直接在網址列後面輸入 `/users/username/repos`
-- <span style="font-weight: bolder;">更便捷的搜尋方式</span>：在搜尋列輸入 `使用者名稱` ，按 `Search` 按鈕就會連結到這位使用者的 Repository 清單頁面
+- **_更便捷的搜尋方式_**：在搜尋列輸入 `使用者名稱` ，按 `Search` 按鈕就會連結到這位使用者的 Repository 清單頁面
 - **_username_** 請輸入 GitHub 已註冊的有效使用者帳戶名稱。
-- <span style="font-weight: bolder;">注意</span>：可能會搜尋到沒有 public repository 的使用者，並顯示空的 Repository 清單。
+- **_注意_**：可能會搜尋到沒有 public repository 的使用者，並顯示空的 Repository 清單。
 
 #### 顯示更多的 Repository
 
