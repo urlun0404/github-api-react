@@ -5,12 +5,14 @@ const Home = () => {
         <h1>GitHub Repository Searcher</h1>
       </header>
       <main>
-        <p>這是一個串接GitHub REST API的練習專案</p>
+        <p>
+          這是一個串接 GitHub REST API 提供搜尋 GitHub 使用者 Repository
+          的練習專案
+        </p>
         <p>
           你可以在網址後面輸入
           <span className="code">
-            / users / <span className="variable"> username </span>
-            /repos
+            /users/<span className="variable">username</span>/repos
           </span>
           來尋找某位GitHub使用者的Repository
         </p>
